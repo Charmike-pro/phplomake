@@ -8,7 +8,7 @@
 <body>
     <h1>Palautelomake</h1>
 
-    <form action="">
+    <form method="post" action="save.php">
         <label for="nimi">Nimi</label>
         <br>
         <input type="text" name="nimi">

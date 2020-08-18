@@ -9,10 +9,10 @@ if (!isset($_POST['nimi']) || !isset($_POST['palaute'])) {
 
 $nimi = $_POST['nimi'];
 $palaute = $_POST['palaute'];
+$pvm = date("d.m.Y");
 
-
-$file = fopen('palautteet.txt', 'w');
-$rivi = $nimi . $palaute;
+$file = fopen('palautteet.txt', 'a');
+$rivi = "<p>$nimi<br>$palaute<br>$pvm</p>" . PHP_EOL;
 fwrite($file, $rivi);
 
 ?>
